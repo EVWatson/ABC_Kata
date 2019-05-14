@@ -6,9 +6,9 @@ public class Block {
     private String letter2;
 
 
-    public Block(String[] letters){
-        this.letter1 = letters[0];
-        this.letter2 = letters[1];
+    public Block(String letter1, String letter2){
+        this.letter1 = letter1;
+        this.letter2 = letter2;
     }
 
 

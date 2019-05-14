@@ -17,7 +17,7 @@ public class BlockCollectionBuilderTest {
     }
 
     @Test
-    public void makeCollectionAddsNewBlockObjectToArrayListUntilCorrectNumberOfBlocksAdded(){
+    public void makeCollectionAddsNewBlockObjectToArrayListUntilSpecifiedNumberOfBlocksAdded(){
 
         Block blocks = blockCollection.getBlock();
 
@@ -27,7 +27,7 @@ public class BlockCollectionBuilderTest {
         expectedResult.add(blocks);
 
 
-        List actualResult = blockCollection.makeCollection();
+        List actualResult = blockCollection.makeCollection(3);
 
         assertEquals(expectedResult, actualResult);
     }

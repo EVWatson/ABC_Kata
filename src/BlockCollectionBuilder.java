@@ -17,12 +17,14 @@ public class BlockCollectionBuilder {
     public ArrayList makeCollection(){
         ArrayList<Block> blockCollection = new ArrayList<>();
 
-        for(int blocks = 0; blocks <= 20; blocks++){
+        for(int blocks = 0; blocks <= 2; blocks++){
             blockCollection.add(this.block);
         }
 
         return blockCollection;
     }
 
-
+    public Block getBlock() {
+        return block;
+    }
 }

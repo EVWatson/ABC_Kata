@@ -14,6 +14,6 @@
 .idea/**/shelf
 .idea/*.iml
 
-*/out
+out/
 
 */.DS_Store

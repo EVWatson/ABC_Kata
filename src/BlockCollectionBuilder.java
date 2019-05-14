@@ -13,6 +13,11 @@ public class BlockCollectionBuilder {
         this.block = new Block(letters);
     }
 
+    /*
+    TODO:
+    1. pass in number of blocks to be built in method
+    2. work out how to put in block letters
+     */
 
     public ArrayList makeCollection(){
         ArrayList<Block> blockCollection = new ArrayList<>();

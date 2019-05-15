@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class WordChecker {
 
     /*
@@ -6,4 +8,23 @@ public class WordChecker {
     3. if true, move on to searching for next letter (if there is one)
     4. if false, stop searching
      */
+
+    private String givenWord;
+
+    public WordChecker(){
+        this.givenWord = givenWord;
+    }
+
+    public String[] splitWordIntoStrings(String word){
+        return word.split("");
+    }
+
+    
+
+
+
+
+    public String getGivenWord() {
+        return givenWord;
+    }
 }

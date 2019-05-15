@@ -1,7 +1,6 @@
 import org.junit.Before;
 import org.junit.Test;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -30,6 +29,22 @@ public class BlockCollectionBuilderTest {
         List actualResult = blockCollection.makeCollection(3);
 
         assertEquals(expectedResult, actualResult);
+    }
+
+    @Test
+    public void applyLettersToBlockAssignsLettersFromArrayOfLettersToEachBlockVariable(){
+        Block block = new Block("B", "O");
+
+        String[][] allLetters = {{"B", "O"}};
+
+        String expectedResult = block.getLetter1() + block.getLetter2();
+
+        blockCollection.applyLettersToEachBlock(allLetters);
+
+        String actualResult = blockCollection.getBlock().getLetter1() + blockCollection.getBlock().getLetter2();
+
+        assertEquals(expectedResult, actualResult);
+
     }
 
 }

@@ -25,7 +25,7 @@ public class BlockCollectionBuilder {
     private Block b19;
     private Block b20;
 
-    private ArrayList allBlocks;
+    private ArrayList<Block> allBlocks;
 
 
     public BlockCollectionBuilder(){
@@ -39,7 +39,7 @@ public class BlockCollectionBuilder {
         this.b8 = new Block("T", "G");
         this.b9 = new Block("Q", "D");
         this.b10 = new Block("F", "S");
-        this. b11 = new Block("J", "W");
+        this.b11 = new Block("J", "W");
         this.b12 = new Block("H", "U");
         this.b13 = new Block("V", "I");
         this.b14 = new Block("A", "N");
@@ -55,7 +55,7 @@ public class BlockCollectionBuilder {
 
 
 
-    private ArrayList addBlocksToCollection(){
+    private ArrayList<Block> addBlocksToCollection(){
 
         ArrayList<Block> blockCollection = new ArrayList<>();
         blockCollection.add(this.b1);
@@ -163,7 +163,7 @@ public class BlockCollectionBuilder {
         return b20;
     }
 
-    public ArrayList getAllBlocks() {
+    public ArrayList<Block> getAllBlocks() {
         return allBlocks;
     }
 }

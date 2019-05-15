@@ -6,6 +6,7 @@ public class Block {
     private String letter2;
 
 
+
     public Block(String letter1, String letter2){
         this.letter1 = letter1;
         this.letter2 = letter2;
@@ -19,4 +20,6 @@ public class Block {
     public String getLetter2() {
         return letter2;
     }
+
+
 }

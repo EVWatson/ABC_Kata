@@ -39,11 +39,18 @@ public class BlockCollectionBuilderTest {
 
         String expectedResult = block.getLetter1() + block.getLetter2();
 
+        System.out.println(expectedResult);
+
         blockCollection.applyLettersToEachBlock(allLetters);
 
         String actualResult = blockCollection.getBlock().getLetter1() + blockCollection.getBlock().getLetter2();
 
+        System.out.println(actualResult);
+
         assertEquals(expectedResult, actualResult);
+
+
+
 
     }
 

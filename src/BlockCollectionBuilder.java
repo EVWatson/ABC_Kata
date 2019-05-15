@@ -43,10 +43,10 @@ public class BlockCollectionBuilder {
 //  Loop through allLetters array, and apply to the blocks, two letters per block
 
     public String applyLettersToEachBlock(String[][] allLetters){
-        for(int block = 0; block <= allLetters.length; block++){
-            for(int letterGroup = 0; letterGroup <= allLetters[block].length; letterGroup++){
-                letter1 = allLetters[block][block];
-                letter2 = allLetters[letterGroup][letterGroup];
+        for(int letter1Of2 = 0; letter1Of2 <= allLetters.length; letter1Of2++){
+            for(int letter2Of2 = 1; letter2Of2 <= allLetters[letter1Of2].length; letter2Of2++){
+                letter1 = allLetters[letter1Of2][letter1Of2];
+                letter2 = allLetters[letter1Of2][letter2Of2];
             }
         }
         return letter1 + letter2;

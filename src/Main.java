@@ -8,8 +8,14 @@ public class Main {
 
 
         BlockCollectionBuilder collectBlocks = new BlockCollectionBuilder();
+        WordChecker checkWord = new WordChecker();
 
         ArrayList<Block> currentBlocks = collectBlocks.getAllBlocks();
+
+//        String[] word = {"A"};
+
+//        checkWord.isWordInBlockCollection(currentBlocks, word );
+
 //
 //        int index = 0;
 //        while (index < currentBlocks.size()) {
@@ -51,4 +57,6 @@ public class Main {
 
 
     }
+
+
 }

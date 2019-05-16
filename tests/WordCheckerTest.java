@@ -1,16 +1,19 @@
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+
+import java.util.ArrayList;
 
 import static org.junit.Assert.*;
 
 public class WordCheckerTest {
 
     private WordChecker checkWord;
+    private BlockCollectionBuilder block;
 
     @Before
     public void setUp(){
         this.checkWord = new WordChecker();
+        this.block = new BlockCollectionBuilder();
     }
 
     @Test
@@ -27,6 +30,29 @@ public class WordCheckerTest {
 
         assertArrayEquals(expectedResult, actualResult);
 
+    }
+
+    @Test
+    public void isWordInBlockCollectionWhenCharacterIsOnBlocksReturnTrue(){
+        String[] wordLetters = {"A"};
+        ArrayList<Block> blocks = block.getAllBlocks();
+
+
+        boolean actualResult = checkWord.isWordInBlockCollection(blocks, wordLetters);
+
+        assertTrue(actualResult);
+    }
+
+    @Test
+    public void isWordInBlockCollectionWhenCharacterIsNotOnBlocksReturnFalse(){
+
+        String[] wordLetters = {"1"};
+        ArrayList<Block> blocks = block.getAllBlocks();
+
+
+        boolean actualResult = checkWord.isWordInBlockCollection(blocks, wordLetters);
+
+        assertFalse(actualResult);
     }
 
 }

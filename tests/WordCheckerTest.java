@@ -55,4 +55,26 @@ public class WordCheckerTest {
         assertFalse(actualResult);
     }
 
+//    @Test
+//    public void isWordInBlockCollectionifThereAreEnoughBlocksToMakeGivenWordWillReturnTrue(){
+//
+//    }
+//
+//    @Test
+//    public void isWordInBlockCollectionifThereAreNotEnoughBlocksToMakeGivenWordWillReturnFalse(){
+//
+//    }
+//
+//    @Test
+//    public void isWordInBlockCollectionifWeHaveRemovedBlocksAndCannotMatchNextLetterWillReturnFalse(){
+//
+//    }
+//
+//    @Test
+//    public void isWordInBlockCollectionifWeHaveRemovedBlocksButCanMatchNextLetterWillReturnTrue(){
+//
+//    }
+
+
+
 }

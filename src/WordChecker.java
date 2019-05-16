@@ -24,21 +24,29 @@ public class WordChecker {
 
     public boolean isWordInBlockCollection(ArrayList<Block> blocksCollection, String[] word){
         boolean result = true;
-        int wordLetter =0;
-        while (wordLetter < word.length) {
-            int block = 0;
-            while (block < blocksCollection.size()) {
-                String letter1 = blocksCollection.get(block).getLetter1();
-                String letter2 = blocksCollection.get(block).getLetter2();
+        int letter = 0;
+        while (letter < word.length) {
+            int blockCollectionIndex = 0;
+            while (blockCollectionIndex < blocksCollection.size()) {
+                String letter1 = blocksCollection.get(blockCollectionIndex).getLetter1();
+                String letter2 = blocksCollection.get(blockCollectionIndex).getLetter2();
 
-                if (letter1.equals(word[wordLetter]) || letter2.equals(word[wordLetter])) {
-                    blocksCollection.remove(block);
+                if (letter1.equals(word[letter]) || letter2.equals(word[letter])) {
+                    blocksCollection.remove(blockCollectionIndex);
                     break;
-                } else {
-                    block++;
                 }
+
+                if(blockCollectionIndex == blocksCollection.size()-1){
+                    result = false;
+                    break;
+                }
+                blockCollectionIndex++;
             }
-            wordLetter++;
+
+            if (!result){
+                break;
+            }
+            letter++;
         }
         return result;
     }

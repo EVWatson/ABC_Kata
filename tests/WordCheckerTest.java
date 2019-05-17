@@ -56,7 +56,7 @@ public class WordCheckerTest {
     }
 
     @Test
-    public void ifThereAreEnoughBlocksToMakeGivenWordWillReturnTrue(){
+    public void whenThereAreEnoughBlocksToMakeGivenWordWillReturnTrue(){
 
         String[] lettersArray = {"B", "A", "R", "K"};
         ArrayList<Block> blocks = block.getAllBlocks();
@@ -67,21 +67,49 @@ public class WordCheckerTest {
 
 
     }
-//
-//    @Test
-//    public void isWordInBlockCollectionifThereAreNotEnoughBlocksToMakeGivenWordWillReturnFalse(){
-//
-//    }
-//
-//    @Test
-//    public void isWordInBlockCollectionifWeHaveRemovedBlocksAndCannotMatchNextLetterWillReturnFalse(){
-//
-//    }
-//
-//    @Test
-//    public void isWordInBlockCollectionifWeHaveRemovedBlocksButCanMatchNextLetterWillReturnTrue(){
-//
-//    }
+
+    @Test
+    public void whenThereAreNotEnoughBlocksToMakeGivenWordWillReturnFalse(){
+        String[] lettersArray = {"C", "O", "M", "M", "O", "N"};
+        ArrayList<Block> blocks = block.getAllBlocks();
+
+        boolean actualResult = checkWord.isWordInBlockCollection(blocks, lettersArray);
+
+        assertTrue(actualResult);
+
+    }
+
+    @Test
+    public void whenWeHaveRemovedBlocksAndCannotMatchTheNextLetterWillReturnFalse(){
+
+        String[] lettersArray = {"B", "O", "O", "K"};
+        ArrayList<Block> blocks = block.getAllBlocks();
+
+        boolean actualResult = checkWord.isWordInBlockCollection(blocks, lettersArray);
+
+        assertTrue(actualResult);
+    }
+
+    @Test
+    public void whenWeHaveRemovedBlocksButCanMatchNextLetterWillReturnTrue(){
+        String[] lettersArray = {"S", "Q", "A", "D"};
+        ArrayList<Block> blocks = block.getAllBlocks();
+
+        boolean actualResult = checkWord.isWordInBlockCollection(blocks, lettersArray);
+
+        assertTrue(actualResult);
+
+    }
+
+    @Test
+    public void whenWordIsGivenInLowerCaseWillReturnTrueWhenLettersCanBeMatchedToBlocks(){
+        String[] lettersArray = {"s", "q", "a", "d"};
+        ArrayList<Block> blocks = block.getAllBlocks();
+
+        boolean actualResult = checkWord.isWordInBlockCollection(blocks, lettersArray);
+
+        assertTrue(actualResult);
+    }
 
 
 

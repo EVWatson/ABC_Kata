@@ -55,10 +55,18 @@ public class WordCheckerTest {
         assertFalse(actualResult);
     }
 
-//    @Test
-//    public void isWordInBlockCollectionifThereAreEnoughBlocksToMakeGivenWordWillReturnTrue(){
-//
-//    }
+    @Test
+    public void ifThereAreEnoughBlocksToMakeGivenWordWillReturnTrue(){
+
+        String[] lettersArray = {"B", "A", "R", "K"};
+        ArrayList<Block> blocks = block.getAllBlocks();
+
+        boolean actualResult = checkWord.isWordInBlockCollection(blocks, lettersArray);
+
+        assertTrue(actualResult);
+
+
+    }
 //
 //    @Test
 //    public void isWordInBlockCollectionifThereAreNotEnoughBlocksToMakeGivenWordWillReturnFalse(){

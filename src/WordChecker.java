@@ -12,6 +12,8 @@ public class WordChecker {
     private String givenWord;
     private BlockCollectionBuilder makeBlocks;
 
+
+
     public WordChecker(){
         this.givenWord = givenWord;
         this.makeBlocks = new BlockCollectionBuilder();
@@ -48,7 +50,7 @@ public class WordChecker {
 
 
 
-    public boolean isLetterFromWordOnAnAvailableBlock(ArrayList<Block> blocksCollection, String letter){
+    private boolean isLetterFromWordOnAnAvailableBlock(ArrayList<Block> blocksCollection, String letter){
         boolean answer = false;
 
         int block = 0;

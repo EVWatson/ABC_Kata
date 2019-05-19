@@ -20,6 +20,7 @@ public class WordChecker {
     }
 
     public String[] splitWordIntoStrings(String word){
+        word = word.toUpperCase();
         return word.split("");
     }
 

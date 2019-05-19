@@ -17,23 +17,19 @@ public class WordCheckerTest {
     }
 
     @Test
-    public void splitWordIntoStringsReturnsIndividualLetters(){
+    public void splitWordIntoStringsReturnsArrayOfIndividualLetters(){
         String word = "cat";
 
-        String[] expectedResult = {"c", "a", "t"};
+        String[] expectedResult = {"C", "A", "T"};
 
         String[] actualResult = checkWord.splitWordIntoStrings(word);
-
-        for (int i = 0; i < actualResult.length; i++){
-            System.out.println(actualResult[i]);
-        }
 
         assertArrayEquals(expectedResult, actualResult);
 
     }
 
     @Test
-    public void isWordInBlockCollectionWhenCharacterIsOnBlocksReturnTrue(){
+    public void whenLetterIsOnAnAvailableBlockReturnsTrue(){
         String[] wordLetters = {"A"};
         ArrayList<Block> blocks = block.getAllBlocks();
 
@@ -44,7 +40,7 @@ public class WordCheckerTest {
     }
 
     @Test
-    public void isWordInBlockCollectionWhenCharacterIsNotOnBlocksReturnFalse(){
+    public void whenLetterIsNotOnAnyAvailableBlocksReturnsFalse(){
 
         String[] wordLetters = {"1"};
         ArrayList<Block> blocks = block.getAllBlocks();
@@ -101,9 +97,13 @@ public class WordCheckerTest {
 
     }
 
+
+
     @Test
-    public void whenWordIsGivenInLowerCaseWillReturnTrueWhenLettersCanBeMatchedToBlocks(){
-        String[] lettersArray = {"s", "q", "a", "d"};
+    public void whenWordIsGivenIsCapitalisedWillReturnTrueWhenLettersCanBeMatchedToBlocks(){
+        String givenWord = "Squad";
+
+        String[] lettersArray = checkWord.splitWordIntoStrings(givenWord);
         ArrayList<Block> blocks = block.getAllBlocks();
 
         boolean actualResult = checkWord.isWordInBlockCollection(blocks, lettersArray);
@@ -111,6 +111,17 @@ public class WordCheckerTest {
         assertTrue(actualResult);
     }
 
+    @Test
+    public void whenWordIsGivenIsAMixtureOfLowerAndUpperCaseWillReturnTrueWhenLettersCanBeMatchedToBlocks(){
+        String givenWord = "SqUaD";
+
+        String[] lettersArray = checkWord.splitWordIntoStrings(givenWord);
+        ArrayList<Block> blocks = block.getAllBlocks();
+
+        boolean actualResult = checkWord.isWordInBlockCollection(blocks, lettersArray);
+
+        assertTrue(actualResult);
+    }
 
 
 }

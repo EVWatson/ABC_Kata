@@ -12,7 +12,7 @@ public class Main {
     }
 
 
-//        BlockCollectionBuilder collectBlocks = new BlockCollectionBuilder();
+//        BlockCollection collectBlocks = new BlockCollection();
 //        WordChecker checkWord = new WordChecker();
 //
 //        ArrayList<Block> currentBlocks = collectBlocks.getAllBlocks();

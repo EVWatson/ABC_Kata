@@ -3,11 +3,11 @@ import java.util.Scanner;
 public class IOManager {
 
     private WordChecker checkWords;
-    private BlockCollectionBuilder allBlocks;
+    private BlockCollection allBlocks;
 
     public IOManager(){
         this.checkWords = new WordChecker();
-        this.allBlocks = new BlockCollectionBuilder();
+        this.allBlocks = new BlockCollection();
     }
 
     public void runProgram(){

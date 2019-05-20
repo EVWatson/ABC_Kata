@@ -2,12 +2,12 @@ import java.util.ArrayList;
 
 public class WordChecker {
 
-//    private BlockCollectionBuilder makeBlocks;
+//    private BlockCollection makeBlocks;
 
 
 
     public WordChecker(){
-//        this.makeBlocks = new BlockCollectionBuilder();
+//        this.makeBlocks = new BlockCollection();
     }
 
     public String[] splitWordIntoStrings(String word){

@@ -8,12 +8,12 @@ import static org.junit.Assert.*;
 public class WordCheckerTest {
 
     private WordChecker checkWord;
-    private BlockCollectionBuilder block;
+    private BlockCollection block;
 
     @Before
     public void setUp(){
         this.checkWord = new WordChecker();
-        this.block = new BlockCollectionBuilder();
+        this.block = new BlockCollection();
     }
 
     @Test

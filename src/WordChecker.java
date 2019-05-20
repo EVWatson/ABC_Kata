@@ -2,21 +2,12 @@ import java.util.ArrayList;
 
 public class WordChecker {
 
-    /*
-    1. get word, split into letters
-    2. take first letter, compare to arrayList: if found, delete the block from array list and return true
-    3. if true, move on to searching for next letter (if there is one)
-    4. if false, stop searching
-     */
-
-    private String givenWord;
-    private BlockCollectionBuilder makeBlocks;
+//    private BlockCollectionBuilder makeBlocks;
 
 
 
     public WordChecker(){
-        this.givenWord = givenWord;
-        this.makeBlocks = new BlockCollectionBuilder();
+//        this.makeBlocks = new BlockCollectionBuilder();
     }
 
     public String[] splitWordIntoStrings(String word){
@@ -34,21 +25,18 @@ public class WordChecker {
 
 
     public boolean isWordInBlockCollection(ArrayList<Block> blocksCollection, String[] wordBrokenIntoLetters){
-        boolean result = false;
+        boolean result = true;
         int letter = 0;
 
-        while (letter < wordBrokenIntoLetters.length) {
+        while (letter < wordBrokenIntoLetters.length && result) {
             if (isLetterFromWordOnAnAvailableBlock(blocksCollection, wordBrokenIntoLetters[letter])){
-                result = true;
                 letter++;
             } else {
-                break;
+                result = false;
             }
         }
         return result;
     }
-
-
 
 
     private boolean isLetterFromWordOnAnAvailableBlock(ArrayList<Block> blocksCollection, String letter){
@@ -68,10 +56,4 @@ public class WordChecker {
         return answer;
     }
 
-
-
-
-    public String getGivenWord() {
-        return givenWord;
-    }
 }

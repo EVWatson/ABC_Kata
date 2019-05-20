@@ -71,7 +71,7 @@ public class WordCheckerTest {
 
         boolean actualResult = checkWord.isWordInBlockCollection(blocks, lettersArray);
 
-        assertTrue(actualResult);
+        assertFalse(actualResult);
 
     }
 
@@ -83,12 +83,12 @@ public class WordCheckerTest {
 
         boolean actualResult = checkWord.isWordInBlockCollection(blocks, lettersArray);
 
-        assertTrue(actualResult);
+        assertFalse(actualResult);
     }
 
     @Test
     public void whenWeHaveRemovedBlocksButCanMatchNextLetterWillReturnTrue(){
-        String[] lettersArray = {"S", "Q", "A", "D"};
+        String[] lettersArray = {"S", "Q", "U", "A", "D"};
         ArrayList<Block> blocks = block.getAllBlocks();
 
         boolean actualResult = checkWord.isWordInBlockCollection(blocks, lettersArray);

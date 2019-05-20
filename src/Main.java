@@ -6,11 +6,16 @@ public class Main {
 
     public static void main(String[] args) {
 
+        IOManager console = new IOManager();
 
-        BlockCollectionBuilder collectBlocks = new BlockCollectionBuilder();
-        WordChecker checkWord = new WordChecker();
+        console.runProgram();
+    }
 
-        ArrayList<Block> currentBlocks = collectBlocks.getAllBlocks();
+
+//        BlockCollectionBuilder collectBlocks = new BlockCollectionBuilder();
+//        WordChecker checkWord = new WordChecker();
+//
+//        ArrayList<Block> currentBlocks = collectBlocks.getAllBlocks();
 
 //        String[] word = {"A"};
 
@@ -40,23 +45,6 @@ public class Main {
 //        }
 
 
-        int cat = 0;
-
-        do {
-            Block block = currentBlocks.get(cat);
-
-            String pepper = block.getLetter1();
-            String louie = block.getLetter2();
-
-            System.out.println(pepper + louie);
-
-            cat++;
-        }
-        while (cat < currentBlocks.size());
-
-
-
-    }
 
 
 }
